@@ -8,9 +8,11 @@
   <body>
       <X3D>
          <scene> 
-
+ 
+   <Viewpoint position="0 5 11" orientation="-0.6 0 0 0.4"></Viewpoint>  
 <!--Тортик -->
-  <transform rotation='1 1.8 0.41 0.5' translation='1 -0.5 0'>
+  <transform rotation='1 1.8 0.41 0.1' translation='-1 0.55 2.5'>
+<Anchor url="https://www.youtube.com/watch?v=nl62hhiBMOM" parameter="target='_self'">
             <shape> 
                <appearance> 
                      <TextureTransform scale='0.6 0.9'></TextureTransform>
@@ -78,7 +80,7 @@ repeatT="True"></ImageTexture>
            <appearance>
                 <material diffuseColor='0.95 0.95 0.95' ></material>
            </Appearance>
-         <torus innerRadius='1.1' outerRadius='1.1'></torus>
+         <torus innerRadius='1' outerRadius='1'></torus>
       </Shape>
  </transform
 
@@ -103,8 +105,9 @@ repeatT="True"></ImageTexture>
              </text>
          </shape>
       </transform>
+     </Anchor>
     </transform>
-      </X3D>
-    </Scene>
+   </Scene>
+  </X3D>
  </body> 
 </html>
