@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>  
+    <meta charset="utf-8"/>
+       <title>Лабораторная работа 3</title>
+    <link rel="stylesheet" href="https://www.x3dom.org/download/x3dom.css"/>
+    <script src="http://x3dom.org/release/x3dom-full.js"></script>
+   </head>
+  <body>
+    <h1>Борисов Максим Денисович В8441</h1>
+     <X3D style="left:0px; top:0px; width:100%; height:100%; border:none;">
+       <Scene>
+        <Background    backurl="https://img4.goodfon.ru/original/320x240/7/6f/zvezdy-bliki-iarkost-linii.jpg"></Background>
+        <Viewpoint position="0 5 11" orientation="-0.6 0 0 0.4"></Viewpoint>   
+        <Fog visibilityRange="100" color="0 0 1" ></Fog>
+        <Collision enabled="true" bboxCenter="0 0 0" bboxSize="15 15 15"></Collision>
+        <NavigationInfo avatarSize="1.5 2 0" type="FLY" speed="1"></NavigationInfo>
+       
+        <Inline url='"Lab3.x3d", "https://github.com/Maxim-1/icg_labwork3/blob/gh-pages/Lab3.x3d.html"'></Inline>
+      
+        <DirectionalLight location="0 30 20" direction="0 0 -1" color="1.2 1 1" intensity="1"
+                          shadowIntensity="0.2" ></DirectionalLight>
+        <PointLight location="-5 10 15" color="1 1 1" intensity="0.1" shadowIntensity="0.3"></PointLight>
+        <SpotLight location="0 10 2" direction="0 0 -1" color="1 1 1" intensity="1"
+                   beamWidth="0.9" cutOffAngle="0.5"></SpotLight>
+
+       
+<!--Окно-->
+  <Transform translation="0 1.5 -7" rotation= 0 0 0 0.907>
+  <Shape>
+    <Appearance>
+         <ImageTexture url="https://avatars.mds.yandex.net/get-zen_doc/3938527/pub_5fb644d16a210f1cc0b2a280_5fb74b1c62945b1f7ec3baa2/scale_1200"></ImageTexture>
+     </Appearance>
+     <box size="14 7 0.5"></box>
+ </Shape>
+</Transform>
+ 
+
+ <!--Ангел-->
+  <Transform  rotation="0 2 0 -1" translation="3.5 1.5 3">
+    <Anchor url="https://www.youtube.com/watch?v=SMbwICGdc70" parameter="target='_self'">
+
+<!--Голова-->
+    <Transform translation="0.3 1.8 0">
+       <shape>
+           <appearance>
+                 <Material diffuseColor="0.5 1 0"></Material>
+           </appearance>
+         <Sphere radius="0.2"></Sphere>
+      </shape>
+     </Transform>
+
+<!--Глаза Ангела-->
+        <Transform DEF="LeftBall" translation="0.22 1.9 0.2">
+         <Shape DEF="MyBall">
+          <Appearance>
+            <Material diffuseColor="0 0 1"></Material>
+          </Appearance>
+          <Sphere radius="0.03"></Sphere>
+         </Shape>
+        </Transform>
+      <Transform DEF="RightBall" translation="0.32 1.9 0.2">
+       <Shape USE="MyBall"></Shape>
+     </Transform>
+  
+<!--нос Ангела-->
+ <Transform translation="0.275 1.8 0.2">
+    <shape>
+      <appearance>
+        <Material diffuseColor="0.8 0 0.1"></Material>
+     </appearance>
+   <cylinder height="0.1" radius="0.01"></cylinder>
+  </shape>
+ </transform>
+
+<!--Тело Ангела-->
+   <transform translation="0.3 0.5 0">
+     <shape>
+       <appearance>
+          <imagetexture url="https://sun1-99.userapi.com/aVXt1osR0TUfQkyaz6WPaB5K7ELZcJwpcI9MaA/c-ix2aX5fKo.jpg"></imagetexture>
+          <TextureTransform scale="0.1 0.3 "></TextureTransform>
+       </appearance>
+      <cone height="2.5" radius="0.8"></cone>
+     </shape>
+    </Transform>
+
+<!--Волшебная юбка-->
+   <transform translation="0.3 0.1 0" rotation="0.3 0.5 0">
+     <shape>
+       <appearance>
+          <Material diffuseColor="0 0 1"></Material>
+       </appearance>
+      <cone height="0.5" radius="0.1"></cone>
+     </shape>
+    </Transform>
+
+<!--Левая нога-->
+   <Transform translation="0 -1.0 0.7">
+       <shape>
+           <appearance>
+                 <Material diffuseColor="0.5 1 0"></Material>
+           </appearance>
+         <Sphere radius="0.25"></Sphere>
+      </shape>
+     </Transform>
+
+<!--Правая нога-->
+   <Transform translation="0.5 -1.0 0.7">
+       <shape>
+           <appearance>
+                 <Material diffuseColor="0 0.5 1"></Material>
+           </appearance>
+         <Sphere radius="0.25"></Sphere>
+      </shape>
+     </Transform>
+
+<!--Левое крыло-->
+    <Shape>
+       <IndexedTriangleSet index="0 1 2" solid="false">
+            <Coordinate point="-1 0 1, 0 1 0, 0 2 0"></Coordinate>
+            <ColorRGBA color="0 0.8 0 1, 0 1 1 1, 1 0 0 1"></ColorRGBA>
+     </IndexedTriangleSet>
+   </Shape>
+
+ <!--Правое крыло-->
+   <transform translation="0.6 0 0">
+     <Shape>
+        <IndexedFaceSet ccw="true" 
+                          colorPerVertex="true" 
+                          convex="true"
+                          creaseAngle="0" 
+                          solid="true"
+                          normalPerVertex="true"
+                          coordIndex="0 1 2  –1">
+                   <Coordinate point="1 0 1, 0 1 0, 0 2 0"></Coordinate>
+                   <ColorRGBA color="0 0.8 0 1, 0 1 1 1, 1 0 0 1"></ColorRGBA>
+      </IndexedFaceSet>
+     </Shape>
+    </transform>
+
+<!--Ковер-самолет-->
+
+  <transform translation="-0.6 -1.2 1" scale="0.15 0.2 0.24" rotation="1 0 0 3.2">
+            <shape>
+                   <ElevationGrid xDimension="7" zDimension="6" xSpacing="2.2" zSpacing="2.2" creaseAngle="5"
+                        solid="false"    height="0.5, 1, 0.5, 0.5, 1, 0.25, 0,
+                                                    1, 0.5, 0.25, 0.25, 0.5, 1, 
+                                                      0.5, 0.25, 0, 0, 0.25, 0.5,
+                                                      0.5, 0.25, 0, 0, 0.25, 0.5,
+                                                     1, 0.5, 0.25, 0.25, 0.5, 1, 
+                                                       1.5, 1, 0.5, 0.5, 1, 1.5"></ElevationGrid>
+            <appearance>
+               <imagetexture url="https://img4.goodfon.ru/original/320x240/7/6f/zvezdy-bliki-iarkost-linii.jpg">
+               </imagetexture>
+               <TextureTransform scale="0.9 1.7"></TextureTransform>
+          </appearance>
+         </shape>
+        </transform>
+   </Anchor>
+  </Transform>
+
+<!--Поверхность пола-->
+    <transform translation='0 -2 0'>
+      <shape>
+         <appearance>
+            <imagetexture url="https://cdn.pixabay.com/photo/2017/11/09/00/07/christmas-2932077_640.jpg"></imagetexture>
+            <TextureTransform scale="2 4"></TextureTransform>
+         </appearance>
+       <IndexedFaceSet ccw="true" 
+                       colorPerVertex="true" 
+                       convex="true" 
+                       creaseAngle="0" 
+                       solid="false"
+                       coordIndex="0 1 2 3 -1">
+       <Coordinate point="7 0 7, 7 0 -7, -7 0 -7, -7 0 7"></Coordinate>
+  </IndexedFaceSet>
+ </shape>
+ </transform>
+
+
+  
+<!--Снеговик-->       
+ <Group DEF="Snowman">
+    <Anchor url="https://www.youtube.com/watch?v=GwjVcDqQ2kc" parameter="target='_self'">
+
+<!--Снеговик тушка низ-->
+    <Transform translation="0.3 -1.1 -4">
+       <shape>
+           <appearance DEF="MySnowman">
+                 <Material diffuseColor="0.95 0.95 0.95"></Material>
+           </appearance>
+         <Sphere radius="0.9"></Sphere>
+      </shape>
+     </Transform>
+ 
+ 
+<!--Снеговик тушка средняя-->
+    <Transform translation="0.3 0.1 -4">
+       <shape>
+           <appearance  USE="MySnowman"></appearance>
+         <Sphere radius="0.7"></Sphere>
+      </shape>
+     </Transform>
+ 
+<!--Снеговик тушка верх-->
+    <Transform translation="0.3 1.1 -4">
+       <shape>
+           <appearance  USE="MySnowman"></appearance>
+         <Sphere radius="0.5"></Sphere>
+      </shape>
+     </Transform>
+ 
+ 
+<!--Глаза снеговика-->
+        <Transform DEF="LeftBall" translation="0.1 1.3 -3.55">
+         <Shape DEF="MyBall">
+          <Appearance>
+            <Material diffuseColor="0 0 1"></Material>
+          </Appearance>
+          <Sphere radius="0.05"></Sphere>
+         </Shape>
+        </Transform>
+      <Transform DEF="RightBall" translation="0.5 1.3 -3.55">
+       <Shape USE="MyBall"></Shape>
+     </Transform> 
+
+ <!--Нос снеговика-->  
+<transform  rotation="2 0 0.3 1.15" translation="0.3 1.2 -3.4" >
+     <shape>
+       <appearance>
+          <Material diffuseColor="1 0 0"></Material>
+       </appearance>
+       <cone bottom="False" bottomRadius="0.15" height="0.5"></cone>
+     </shape>
+    </Transform>
+
+<!--Ведро на снеговике--> 
+  <Transform translation="0.3 1.5 -4">
+    <shape>
+       <Appearance>
+            <Material diffuseColor="0 0 1"></Material>
+       </Appearance>
+       <Cylinder radius="0.3" height="1"></Cylinder>
+       </Shape>
+      </Transform>  
+     </Anchor>
+    </Group>
+
+<!--Еще Снеговик-->
+      <Transform translation="4.3 0 -1">
+         <Group USE="Snowman"></Group>
+      </Transform>
+      <Transform translation="-4.5 0 -1">
+         <Group USE="Snowman"></Group>
+      </Transform>
+ 
+ </Scene>
+ </X3D>
+</body>
+</html>
