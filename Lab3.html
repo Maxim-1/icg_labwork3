@@ -10,14 +10,12 @@
     <h1>Борисов Максим Денисович В8441</h1>
      <X3D style="left:0px; top:0px; width:100%; height:100%; border:none;">
        <Scene>
-        <Background    backurl="https://img4.goodfon.ru/original/320x240/7/6f/zvezdy-bliki-iarkost-linii.jpg"></Background>
+        <Background backurl="https://img4.goodfon.ru/original/320x240/7/6f/zvezdy-bliki-iarkost-linii.jpg"></Background>
         <Viewpoint position="0 5 11" orientation="-0.6 0 0 0.4"></Viewpoint>   
-        <Fog visibilityRange="100" color="0 0 1" ></Fog>
+        <Fog visibilityRange="70" color="0 0 1" ></Fog>
         <Collision enabled="true" bboxCenter="0 0 0" bboxSize="15 15 15"></Collision>
-        <NavigationInfo avatarSize="1.5 2 0" type="FLY" speed="1"></NavigationInfo>
+        <NavigationInfo avatarSize=2.5 2 0" type="FLY" speed="1"></NavigationInfo>
        
-        <Inline url='"Lab3.x3d", "https://github.com/Maxim-1/icg_labwork3/blob/gh-pages/Lab3.x3d.html"'></Inline>
-      
         <DirectionalLight location="0 30 20" direction="0 0 -1" color="1.2 1 1" intensity="1"
                           shadowIntensity="0.2" ></DirectionalLight>
         <PointLight location="-5 10 15" color="1 1 1" intensity="0.1" shadowIntensity="0.3"></PointLight>
@@ -177,7 +175,8 @@
  </shape>
  </transform>
 
-
+<Inline url='"Lab3.x3d", "https://github.com/Maxim-1/icg_labwork3/blob/gh-pages/Lab3.x3d.html",
+  "https://github.com/Maxim-1/icg_labwork3/commit/844ea4e78232a0563161f3ef8cca4896df7bb2b9#diff-7ee698ea96d3d3aefcf0a7c36e2b2c5b0ef523b5728b11a6801ba88340bfe242"'></Inline>
   
 <!--Снеговик-->       
  <Group DEF="Snowman">
@@ -253,8 +252,7 @@
       <Transform translation="-4.5 0 -1">
          <Group USE="Snowman"></Group>
       </Transform>
- 
- </Scene>
+  </Scene>
  </X3D>
 </body>
 </html>
